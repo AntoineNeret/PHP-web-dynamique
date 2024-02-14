@@ -61,6 +61,10 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
 
+                    <?php for ($i = 0; $i < count($pays); $i++) {
+                        echo "<p>$pays[$i]</p>";
+                    } ?>
+
                 </div>
             </div>
         </div>
@@ -83,7 +87,9 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                 <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
-
+                    <?php for ($i = 0; $i < count($pays); $i++) : ?>
+                        <p><?= $pays[$i] ?></p>
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>
@@ -105,7 +111,10 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                     <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
                     <div class="bg-black rounded-4 p-3 flex-fill">
                         <!-- Votre code -->
-
+                        <?php foreach ($pays as $valeur) {
+                            // instructions (en PHP)
+                            echo "<p>$valeur</p>";
+                        } ?>
                     </div>
                 </div>
             </div>
@@ -129,6 +138,10 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                     <div class="bg-black rounded-4 p-3 flex-fill">
                         <!-- Votre code -->
 
+                        <?php foreach ($pays as $valeur) : ?>
+                            <p><?= $valeur ?></p>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>
@@ -151,7 +164,12 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                     <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
                     <div class="bg-black rounded-4 p-3 flex-fill">
                         <!-- Votre code -->
-
+                        <ul>
+                            <?php foreach ($pays as $valeur) {
+                                // instructions (en PHP)
+                                echo "<li>$valeur</li>";
+                            } ?>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -165,9 +183,19 @@ $pays = ["France", "Italie", "Espagne", "Belgique"];
                 </p>
                 <div class="d-flex">
                     <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
-                    <div class="bg-black rounded-4 p-3 flex-fill">
+                    <div class="bg-black rounded-4 p-3 flex-fill ">
                         <!-- Votre code -->
-
+                        <table class="table table-striped table-dark ">
+                            <thead class="text-center">
+                            <th>Liste de pays</th>
+                            </thead>
+                            <tbody class="text-center">
+                            <?php foreach ($pays as $valeur) {
+                                // instructions (en PHP)
+                                echo "<tr><td class='border border-3'>$valeur</td></tr>";
+                            } ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

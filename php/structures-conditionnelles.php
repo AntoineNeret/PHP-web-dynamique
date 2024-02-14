@@ -66,6 +66,12 @@ $age = 17;
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
 
+                    <?php if ($age >= 18) {
+                        echo "<p>$nom est majeur</p>";
+                    } else {
+                        echo "<p>$nom est mineur</p>";
+                    } ?>
+
                 </div>
             </div>
         </div>
@@ -88,6 +94,12 @@ $age = 17;
                 <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
+
+                    <?php if ($age >= 18) { ?>
+                        <p>Dupont est majeur</p>
+                    <?php } else { ?>
+                        <p>Dupont est mineur</p>
+                    <?php } ?>
 
                 </div>
             </div>
@@ -112,6 +124,12 @@ $age = 17;
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
 
+                    <?php if ($age >= 18) : ?>
+                        <p><?= $nom ?> est majeur</p>
+                    <?php else : ?>
+                        <p><?= $nom ?> est mineur</p>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </div>
@@ -131,7 +149,8 @@ $age = 17;
                 <i class="bi bi-filetype-exe fs-2 text-warning text-bold"></i>
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
-
+                    <?php $var = ($age >= 18) ? "majeur" : "mineur" ?>
+                    <p><?= $nom . " est " . $var ?></p>
                 </div>
             </div>
         </div>
@@ -154,6 +173,8 @@ $age = 17;
                 <div class="bg-black rounded-4 p-3 flex-fill">
                     <!-- Votre code -->
 
+                    <p><?= $nom ?> est <span class="<?= ($age >= 18) ? "text-success" : "text-danger" ?>">majeur</span>
+                    </p>
                 </div>
             </div>
         </div>
